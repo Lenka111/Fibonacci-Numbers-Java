@@ -6,17 +6,19 @@ import java.util.Scanner;
 
 public class FibonacciSequence {
 
-     static int fibNum(int i){
-       if (i < 0)
+     public static int fibNum(int num){
+          //base case
+       if (num < 0)
            System.out.println("Enter a positive number");
 
-       else if (i == 0 || i == 1)
-           return i;
+       else if (num == 0 || num == 1)
+           return num;
 
        else
-           return (fibNum(i-1) + fibNum(i-2));
+            //reccursively compute Fibbonacci number
+           return (fibNum(num-1) + fibNum(num-2));
 
-       return i;
+       return num;
 
 
     } // end method fibNum
